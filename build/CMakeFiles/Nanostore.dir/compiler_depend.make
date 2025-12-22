@@ -33,6 +33,7 @@ CMakeFiles/Nanostore.dir/src/database/Database.cpp.o: /mnt/c/Users/Acer/OneDrive
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -127,11 +128,13 @@ CMakeFiles/Nanostore.dir/src/database/Database.cpp.o: /mnt/c/Users/Acer/OneDrive
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/format \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
   /usr/include/c++/13/locale \
@@ -235,8 +238,10 @@ CMakeFiles/Nanostore.dir/src/database/Database.cpp.o: /mnt/c/Users/Acer/OneDrive
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -303,6 +308,7 @@ CMakeFiles/Nanostore.dir/src/main.cpp.o: /mnt/c/Users/Acer/OneDrive/Desktop/Nano
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -405,6 +411,7 @@ CMakeFiles/Nanostore.dir/src/main.cpp.o: /mnt/c/Users/Acer/OneDrive/Desktop/Nano
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/format \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
@@ -552,8 +559,10 @@ CMakeFiles/Nanostore.dir/src/main.cpp.o: /mnt/c/Users/Acer/OneDrive/Desktop/Nano
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -612,6 +621,7 @@ CMakeFiles/Nanostore.dir/src/parser/Parser.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -707,6 +717,7 @@ CMakeFiles/Nanostore.dir/src/parser/Parser.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/format \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
@@ -817,8 +828,10 @@ CMakeFiles/Nanostore.dir/src/parser/Parser.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -885,6 +898,7 @@ CMakeFiles/Nanostore.dir/src/server/Server.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -987,6 +1001,7 @@ CMakeFiles/Nanostore.dir/src/server/Server.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/format \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
@@ -1134,8 +1149,10 @@ CMakeFiles/Nanostore.dir/src/server/Server.cpp.o: /mnt/c/Users/Acer/OneDrive/Des
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -1761,8 +1778,6 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 
-/usr/include/c++/13/iostream:
-
 /mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/src/threadpool/ThreadPool.cpp:
 
 /mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/src/threadpool/BlockingQueue.cpp:
@@ -1855,9 +1870,17 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/include/threadpool/BlockingQueue.hpp:
 
-/usr/include/c++/13/functional:
+/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/include/parser/Parser.hpp:
 
-/usr/include/c++/13/format:
+/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/src/main.cpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
 /usr/include/c++/13/ext/type_traits.h:
 
@@ -1871,9 +1894,11 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/c++/13/ctime:
 
-/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/include/parser/Parser.hpp:
-
 /usr/include/c++/13/cstdio:
+
+/usr/include/c++/13/format:
+
+/usr/include/c++/13/fstream:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -1973,10 +1998,6 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/c++/13/bits/refwrap.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
 /usr/include/c++/13/bits/ranges_base.h:
@@ -2002,6 +2023,12 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/c++/13/bits/parse_numbers.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
@@ -2036,6 +2063,12 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 /usr/include/c++/13/bits/concept_check.h:
 
 /usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/c++/13/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/c++/13/bits/fstream.tcc:
 
 /usr/include/x86_64-linux-gnu/sys/socket.h:
 
@@ -2139,8 +2172,6 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/13/typeinfo:
-
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/c++/13/condition_variable:
@@ -2187,8 +2218,6 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
-/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/src/main.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
@@ -2207,15 +2236,11 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
-/usr/include/c++/13/bits/stl_heap.h:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/c++/13/bits/parse_numbers.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/c++/13/bits/node_handle.h:
+
+/usr/include/c++/13/functional:
 
 /usr/include/limits.h:
 
@@ -2224,6 +2249,8 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 /usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/ios:
+
+/usr/include/c++/13/iostream:
 
 /usr/include/c++/13/istream:
 
@@ -2240,10 +2267,6 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 /usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/c++/13/tuple:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/include/c++/13/type_traits:
 
@@ -2395,6 +2418,12 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
+
 /usr/include/c++/13/bits/ranges_util.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
@@ -2416,7 +2445,3 @@ CMakeFiles/Nanostore.dir/src/threadpool/ThreadPool.cpp.o: /mnt/c/Users/Acer/OneD
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
