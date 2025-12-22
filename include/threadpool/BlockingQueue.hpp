@@ -1,6 +1,6 @@
 #pragma once
 
-#include"../common/Types.hpp"
+#include"common/Types.hpp"
 #include<queue>
 #include<mutex>
 #include<optional>

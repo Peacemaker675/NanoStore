@@ -1,4 +1,4 @@
-#include"../include/threadpool/ThreadPool.hpp"
+#include"threadpool/ThreadPool.hpp"
 #include<iostream>
 
 ThreadPool::ThreadPool(size_t num_threads, size_t capacity) : task_queue(capacity){

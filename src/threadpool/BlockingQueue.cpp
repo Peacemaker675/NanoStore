@@ -1,4 +1,4 @@
-#include"../include/threadpool/BlockingQueue.hpp"
+#include"threadpool/BlockingQueue.hpp"
 
 BlockingQueue::BlockingQueue(size_t capacity) :q_capacity(capacity), stopped(false){
 }

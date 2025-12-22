@@ -2,11 +2,11 @@
 #include<unordered_map>
 #include<string>
 #include<mutex>
-#include"../common/Types.hpp"
+#include"common/Types.hpp"
 
 class Database{
 public:
-    void set(std::string key, std::string data, int ttl);
+    void set(std::string key, int ttl, std::string data);
     std::string get(std::string key);
     void del(std::string key);
 private:
