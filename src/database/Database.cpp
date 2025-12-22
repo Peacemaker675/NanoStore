@@ -3,6 +3,11 @@
 #include<format>
 #include<chrono>
 
+/*
+    Replace std::flush with '\n' to increase performance, it slows down due to disk ops :)
+*/
+
+
 Database::Database(){
     file.open("../logs/logs.txt", std::ios::out | std::ios::app | std::ios::in); // this file path is with respect to build
     file.clear();

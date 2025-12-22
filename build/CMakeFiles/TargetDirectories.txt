@@ -1,3 +1,0 @@
-/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/build/CMakeFiles/Nanostore.dir
-/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Acer/OneDrive/Desktop/Nanostore/build/CMakeFiles/rebuild_cache.dir
