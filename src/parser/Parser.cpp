@@ -1,58 +1,52 @@
-#include<ranges>
-#include"parser/Parser.hpp"
+#include "parser/Parser.hpp"
+#include <algorithm>
 
-std::string Parser::process(std::string request, Database& db){
-    std::vector<std::string> tokens = tokenize(request);
-    if(tokens.size() < 2) return std::string("ERR : USAGE <CMD> ...\n");
-    std::string command = std::move(tokens[0]);
-    // convert command to lowercase
-    std::transform(command.begin(), command.end(), command.begin(), [] (unsigned char c) {
-        return std::tolower(c);
-    });
-    
+std::string Parser::process(std::string_view request, Database& db) {
+    size_t pos1 = request.find(' '); // find first space to isolate the command
+    std::string_view cmd_view = request.substr(0, pos1);
+    std::string command(cmd_view); 
+    std::transform(command.begin(), command.end(), command.begin(), 
+                   [](unsigned char c){ return std::tolower(c); });
+
     if(command == "set"){
-        if(tokens.size() < 4) return std::string("ERR : USAGE SET <KEY> <TTL> <VAL>\n");
-        try{
-            db.set(tokens[1], stoi(tokens[2]), tokens[3]);
-        }catch(...){
-            return std::string("ERR : TTL SHOULD BE INT\n");
-        }
-        return std::string("QUERY OK\n");
-    }else if(command == "get"){
-        std:: string response;
-        try{
-            response = db.get(tokens[1]);
-        }catch(std::string e){
-            return e;
-        }
-        return response;
-    }else if(command == "del"){
-        try{
-            db.del(tokens[1]);
-        }catch(std::string e){
-            return e;
-        }
-        return std::string("QUERY OK\n");
-    }else{
-        return std::string("ERR : INVALID CMD {SET, GET, DEL}\n");
-    }
-}
+        if(pos1 == std::string_view::npos) return "ERR : USAGE SET <KEY> <TTL> <VAL>\n";
+        size_t pos2 = request.find(' ', pos1 + 1); // space between key and ttl
+        if(pos2 == std::string_view::npos) return "ERR : USAGE SET <KEY> <TTL> <VAL>\n";
+        size_t pos3 = request.find(' ', pos2 + 1); // space between ttl and val
+        if(pos3 == std::string_view::npos) return "ERR : USAGE SET <KEY> <TTL> <VAL>\n";
 
-std::vector<std::string> Parser::tokenize(std::string request){
-    std::vector<std::string> tokens;
-    size_t j = 0;
-    std::string token = "";
-    for(size_t i=0; i<request.size(); i++){
-        if(request[i] != ' ' || j == 3){ // if j==3 we are reading the VAL so include space
-            token += request[i];
-        }else{
-            if(!token.empty()){
-                tokens.emplace_back(std::move(token));
-                token = "";
-                j++;
-            }
+        std::string_view key_view = request.substr(pos1 + 1, pos2 - (pos1 + 1));
+        std::string_view ttl_view = request.substr(pos2 + 1, pos3 - (pos2 + 1));
+        std::string_view val_view = request.substr(pos3 + 1);
+
+        try{
+            int ttl = std::stoi(std::string(ttl_view));
+            db.set(std::string(key_view), ttl, std::string(val_view));
+        }catch(...){
+            return "ERR : TTL SHOULD BE INT\n";
         }
+        return "QUERY OK\n";
+    }else if(command == "get"){
+        if(pos1 == std::string_view::npos) return "ERR : USAGE GET <KEY>\n";
+
+        std::string_view key_view = request.substr(pos1 + 1);
+        if(!key_view.empty() && key_view.back() == '\n') key_view.remove_suffix(1);
+        try{
+            return db.get(std::string(key_view));
+        }catch(const std::string& e){
+            return e;
+        }
+    }else if(command == "del"){
+        if (pos1 == std::string_view::npos) return "ERR : USAGE DEL <KEY>\n";
+        
+        std::string_view key_view = request.substr(pos1 + 1);
+        if(!key_view.empty() && key_view.back() == '\n') key_view.remove_suffix(1);
+        try{
+            db.del(std::string(key_view));
+        }catch(const std::string& e) {
+            return e;
+        }
+        return "QUERY OK\n";
     }
-    if(!token.empty()) tokens.emplace_back(std::move(token));
-    return tokens;
+    return "ERR : INVALID CMD {SET, GET, DEL}\n";
 }

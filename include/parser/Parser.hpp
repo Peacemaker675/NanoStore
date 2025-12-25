@@ -5,7 +5,5 @@
 
 class Parser{
 public:
-    static std::string process(std::string request, Database& db);
-private:
-    static std::vector<std::string> tokenize(std::string request);
+    static std::string process(std::string_view request, Database& db);
 };

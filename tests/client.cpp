@@ -37,8 +37,8 @@ int main() {
         std::string input;
         std::cout << "Client >> ";
         std::getline(std::cin, input);
-
         if (input == "exit") break;
+        input += '\n';
         if (send(sock, input.c_str(), input.length(), 0) < 0) {
             std::cerr << "Send failed" << std::endl;
             break;

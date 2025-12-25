@@ -30,14 +30,22 @@ void Server::start(){
 }
 
 void Server::handle_client(int client_socket){
-    char buffer[1024];
+    char buffer[4096];
+    std::string data_read;
+    std::string response;
     while(true){
         int n = recv(client_socket, buffer, sizeof(buffer), 0);
         if(n <= 0) break;
-        buffer[n]='\0';
-        std::string request(buffer);
-        std::string response = Parser::process(request, db);
+        data_read.append(buffer, n);
+        size_t newline_pos;
+        while((newline_pos = data_read.find('\n')) != std::string::npos){
+            std::string_view request(data_read.data(), newline_pos);
+            response += Parser::process(request, db);
+            response += '\n';
+            data_read.erase(0, newline_pos+1);
+        }
         write(client_socket, response.c_str(), response.size());
+        response.clear();
     }
     close(client_socket);
 }
