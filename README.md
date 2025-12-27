@@ -1,27 +1,38 @@
-# NANOSTORE : High Performance C++ Redis like Database
-<hr>
+# NANOSTORE: High-Performance C++ Redis-like Database
 
 ## Description
-Nanostore is a key-value database supporting three core operations: SET, GET, and DEL. It achieves high-speed request processing by utilizing a thread pool architecture with blocking queues and database partitioning. While designed natively for Linux, it can be run on Windows via WSL.
+Nanostore is a key-value database supporting three core operations: `SET`, `GET`, and `DEL`. It achieves high-speed request processing by utilizing a thread pool architecture with blocking queues and database partitioning. While designed natively for Linux, it can be run on Windows via WSL.
 
 ## Usage
-You can run the binaries inside bin/ folder - 
-1. Nanostore - This is the binary for the database (without persistence, i.e it will not retain data after a crash)
-2. Nanostore_persistent - This is the persistenet version which will retain data even after a carsh (slower because of std::flush).
-3. client - This can be used to communicate with the database.
-4. stress_duration - This is used to test database for a fixed time interval (60s , you can change the value in test/ folder and recompile the c++ file for another value).
-5. stress_test - This is used to test the database for a fixed number of requests.
+You can run the binaries located inside the `bin/` folder:
+
+* **`Nanostore`**
+    The core database binary. This version runs entirely in memory and does **not** retain data after a crash (Non-persistent).
+    
+* **`Nanostore_persistent`**
+    The persistent version of the database. It retains data after a crash but is slower due to disk I/O overhead (uses `std::flush`).
+
+* **`client`**
+    A CLI tool used to communicate with the database.
+
+* **`stress_test`**
+    A benchmarking tool that tests the database for a fixed number of requests.
+
+* **`stress_duration`**
+    A benchmarking tool that tests the database for a fixed time interval (default: 60s). 
+    *Note: To change the duration, modify the value in the `test/` folder and recompile.*
 
 ## Benchmarks
-System Specs - Ryzen 5 5500U, 16GB ram, WSL2 on windows.
-| Version | Test | Throughput |
-| --- | --- | --- |
-| Nanostore | Stress_test | 961,606.67 req/sec |
-| Nanostore | Stress_duration | 2,626,585 req/sec |
-| Nanostore_persistent | Stress_test | 14,596.4 req/sec |
-| Nanostore_persistent | Stress_duration | 31721.7 req/sec |
+**System Specs:** Ryzen 5 5500U, 16GB RAM, WSL2 on Windows.
+
+| Version | Test Type | Throughput |
+| :--- | :--- | ---: |
+| **Nanostore** | Stress_test | 961,606.67 req/sec |
+| **Nanostore** | Stress_duration | 2,626,585.00 req/sec |
+| **Nanostore_persistent** | Stress_test | 14,596.40 req/sec |
+| **Nanostore_persistent** | Stress_duration | 31,721.70 req/sec |
 
 ## Future Updates
-1. Make file persistence faster , its slower because we writing commands directly.
-2. Add error types in Types.hpp for better modularity and management.
-3. Implement EPOLL without degrading performance.
+* **Optimize Persistence:** Improve file writing speed (currently slow due to direct synchronous command writing).
+* **Error Handling:** Add distinct error types in `Types.hpp` for better modularity and management.
+* **EPOLL Implementation:** Migrate to `epoll` for event notification without degrading performance.
