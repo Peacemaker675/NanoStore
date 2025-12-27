@@ -1,4 +1,5 @@
 # NANOSTORE: High-Performance C++ Redis-like Database
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Peacemaker675/NanoStore)
 
 ## Description
 Nanostore is a key-value database supporting three core operations: `SET`, `GET`, and `DEL`. It achieves high-speed request processing by utilizing a thread pool architecture with blocking queues and database partitioning. While designed natively for Linux, it can be run on Windows via WSL.
