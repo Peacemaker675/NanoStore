@@ -10,8 +10,8 @@
 
 const std::string HOST = "127.0.0.1";
 const int PORT = 8080;
-const int NUM_THREADS = 12;        
-const int TEST_DURATION_SECONDS = 30; // run for exactly 30 seconds
+const int NUM_THREADS = 16;        
+const int TEST_DURATION_SECONDS = 60;
 const int BATCH_SIZE = 50; 
 
 std::atomic<long long> total_success_count(0);
@@ -61,7 +61,7 @@ void client_task(int id) {
 }
 
 int main() {
-    std::cout << "Starting 30-Second Stability Test (" << NUM_THREADS << " threads)..." << std::endl;
+    std::cout << "Starting "<<TEST_DURATION_SECONDS<<" -Second Stability Test (" << NUM_THREADS << " threads)..." << std::endl;
     
     std::vector<std::thread> threads;
     for(int i = 0; i < NUM_THREADS; i++) {

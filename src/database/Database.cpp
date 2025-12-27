@@ -43,7 +43,7 @@ void Database::set(std::string key, int ttl, std::string data){
     std::unique_lock<std::mutex> lock(shards[db_idx]->mtx);
     std::string log_entry = std::format("SET {} {} {} {}\n", timestamp, ttl, key, v.data);
     shards[db_idx]->file.clear();
-    shards[db_idx]->file << log_entry << "\n";
+    shards[db_idx]->file << log_entry << std::flush;
     shards[db_idx]->map[key] = v;
 }
 
